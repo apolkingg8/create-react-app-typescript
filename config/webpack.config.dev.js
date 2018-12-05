@@ -138,7 +138,6 @@ module.exports = {
         test: /\.(js|jsx|mjs)$/,
         loader: require.resolve('source-map-loader'),
         enforce: 'pre',
-        include: paths.appSrc,
       },
       {
         // "oneOf" will traverse all following loaders until one will
@@ -172,7 +171,6 @@ module.exports = {
           // Compile .tsx?
           {
             test: /\.(ts|tsx)$/,
-            include: paths.appSrc,
             use: [
               {
                 loader: require.resolve('ts-loader'),
